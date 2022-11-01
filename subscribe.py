@@ -77,9 +77,9 @@ def oncall(info):
     print(json.dumps(info, indent=4, sort_keys=True))
     component.events_received.append(info)
 
-@component.subscribe(u"com.zenitel.call_queue")
-def onqueuecall(info):
-    print("com.zenitel.call_queue:")
+@component.subscribe(u"com.zenitel.call_leg")
+def oncallleg(info):
+    print("com.zenitel.call_leg:")
     print(json.dumps(info, indent=4, sort_keys=True))
     component.events_received.append(info)
 
